@@ -1,0 +1,32 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+<ribbon startFromScratch="false">
+<tabs>
+<tab id="NewTab" visible="true" label="Inno HC" insertAfterMso="TabHome" keytip="B">
+
+<group id="GroupMonthReport" visible="true" label="月报制作">
+<button id="EASAO" label="制作月报" visible="true" enabled="true" imageMso="ControlLayoutStacked" size="large" onAction="ExecuteAllStepsAtOnce" keytip="A" />
+</group>
+
+<group id="GroupPhaseReport" visible="true" label="阶段性报告制作">
+<button id="ImportMonthReports" label="导入单年度所有月报" visible="true" enabled="true" imageMso="CreateFormWithMultipleItems" size="large" onAction="mainOpenCopyCloseOneiMonthlyReport" keytip="M" />
+<button id="CreatePivotTable" label="生成数据透视表" visible="true" enabled="true" imageMso="PivotTableSelectFlyout" size="large" onAction="mainCreatePivotTable" keytip="P" />
+<button id="CreatePieAndBar" label="生成饼图和柱状图" visible="true" enabled="true" imageMso="PivotChartType" size="large" onAction="mainCreatePieChart" keytip="T" />
+<button id="CreateWordDoc" label="生成Word文档" visible="true" enabled="true" imageMso="ReviewDisplayForReview" size="large" onAction="mainCreateWordDoc" keytip="W" />
+</group>
+
+<group id="OneKeyToDocG" visible="true" label="一键生成Word文档">
+<button id="OneKeyToDoc" label="一键生成Word文档" visible="true" enabled="true" imageMso="ReviewCompareMenu" size="large" onAction="OnKeyToDoc" keytip="B" />
+</group>
+
+<group id="SumAll" visible="true" label="汇总">
+<button id = "SumAll1" label="汇总本文件夹文件" visible="true" enabled="true" imageMso="AutoSum" size="large" onAction="SumAllToOne" keytip="U" />
+</group>
+
+<group id="NoRes" visible="true" label="无约束汇总">
+<button id = "DefaultXlsToOne" label="汇总所有Excel工作簿" visible="true" enabled="true" imageMso="AccessFormWizard" size="large" onAction="NoResOpenCopyCloseOneiMonthlyReport" keytip="U" />
+<button id = "Statics" label="生成统计数据和图表" visible="true" enabled="true" imageMso="TableSharePointListsRefreshList" size="large" onAction="NoResCreatePieChart" keytip="Q" />
+</group>
+</tab>
+</tabs>
+</ribbon>
+</customUI>
