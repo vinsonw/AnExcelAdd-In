@@ -10,9 +10,6 @@ src文件夹中包含下列文件：
 + `其他小功能.bas`
 + `月报自动制作脚本v1.bas`
 
-
-其中的`Inno.xlam`文件即为可使用的加载宏文件。
-
 由`src`文件夹中的代码模块和`xml`文件即可组建出可用的`Inno.xlam`。该加载宏会为`Excel`增加新的`Ribbon`选项卡`Inno HC`，`customUI.xml`文件负责指定增加的`Inno HC`选项卡的样式。
 为了组装加载宏，可能需要可以编辑`Excel`文件中`xml`文件的工具：[CustomUIEditor](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2006/05/26/customuieditor.aspx)。可以先新建一个空的`Excel`加载宏文件`Inno.xlam`（推荐`.xlam`后缀的加载宏），然后使用`CustomUIEditor`对其中的`xml`文件进行编辑，
 即将`customUI.xml`中的内容复制到`CustomUIEditor`中编辑的`customUI.xml`文件中。
