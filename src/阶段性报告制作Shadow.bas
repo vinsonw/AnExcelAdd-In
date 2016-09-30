@@ -273,9 +273,30 @@ For i = 2 To realEndRow
 
     For j = 6 To 14 Step 4
     
-    If j = 6 Then currentUseWB.Worksheets("SourceData").Cells(i, j).Value = Format(currentUseWB.Worksheets("SourceData").Cells(i, j - 2).Value / ctZixun, "0.00%")
-    If j = 10 Then currentUseWB.Worksheets("SourceData").Cells(i, j).Value = Format(currentUseWB.Worksheets("SourceData").Cells(i, j - 2).Value / ctXinli, "0.00%")
-    If j = 14 Then currentUseWB.Worksheets("SourceData").Cells(i, j).Value = Format(currentUseWB.Worksheets("SourceData").Cells(i, j - 2).Value / ctTousu, "0.00%")
+        If j = 6 Then
+            If ctZixun = 0 Then
+                currentUseWB.Worksheets("SourceData").Cells(i, j).Value = Format(0, "0.00%")
+            Else
+                currentUseWB.Worksheets("SourceData").Cells(i, j).Value = Format(currentUseWB.Worksheets("SourceData").Cells(i, j - 2).Value / ctZixun, "0.00%")
+            End If
+        End If
+        
+        If j = 10 Then
+            If ctXinli = 0 Then
+                currentUseWB.Worksheets("SourceData").Cells(i, j).Value = Format(0, "0.00%")
+            Else
+                currentUseWB.Worksheets("SourceData").Cells(i, j).Value = Format(currentUseWB.Worksheets("SourceData").Cells(i, j - 2).Value / ctXinli, "0.00%")
+            End If
+        End If
+        
+        If j = 14 Then
+            If ctTousu = 0 Then
+                currentUseWB.Worksheets("SourceData").Cells(i, j).Value = Format(0, "0.00%")
+            Else
+                currentUseWB.Worksheets("SourceData").Cells(i, j).Value = Format(currentUseWB.Worksheets("SourceData").Cells(i, j - 2).Value / ctTousu, "0.00%")
+            End If
+        End If
+    
     Next
 Next
 
