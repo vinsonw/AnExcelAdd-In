@@ -1,6 +1,8 @@
 # AnExcelAdd-In
 > Inno.xlam加载宏文件适用于软件版本：`64位 Win7`上的`32位`的`Excel2007`，`Excel2010`，`Excel2013`
 
+'Test for Ubuntu 16.04.
+
 src文件夹中包含下列文件：
 + `customUI.xml`
 + `阶段性报告制作v1.bas`
